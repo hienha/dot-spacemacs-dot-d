@@ -44,17 +44,15 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     ;; lsp
      markdown
      multiple-cursors
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
      treemacs
-     ;; version-control
+     (chinese :variables
+              chinese-default-input-method 'wubi
+              chinese-enable-youdao-dict t)
      )
 
    ;; List of additional packages that will be installed without being
@@ -64,7 +62,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(youdao-dictionary)
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
