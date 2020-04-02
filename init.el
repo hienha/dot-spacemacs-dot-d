@@ -497,7 +497,8 @@ before packages are loaded."
   (define-key evil-insert-state-map [escape] 'evil-normal-state)
   (setq ns-use-srgb-colorspace nil)
   (setq powerline-default-separator 'arrow)
-  )
+  (evilified-state-evilify-map occur-mode-map
+    :mode occur-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
