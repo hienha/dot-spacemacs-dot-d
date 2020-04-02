@@ -28,7 +28,7 @@ This function should only modify configuration layer settings."
 
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/")
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
@@ -38,21 +38,36 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     (vinegar :variables vinegar-reuse-dired-buffer t)
      ivy
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-help-tooltip t
+                      :disabled-for org markdown)
      (better-defaults :variables better-defaults-move-to-end-of-code-first t)
      emacs-lisp
-     git
+     (git :variables
+          git-magit-status-fullscreen t
+          magit-save-repository-buffers 'dontask
+          magit-refs-show-commit-count 'all
+          magit-revision-show-gravatars nil)
      helm
+     ibuffer 
      markdown
      multiple-cursors
      org
-     spell-checking
-     syntax-checking
+     emacs-lisp
+     python
+     ranger
+     colors
+     (spell-checking :variables spell-checking-enable-by-default nil)
+     (syntax-checking :variables syntax-checking-enable-by-default nil)
      treemacs
-     (chinese :variables
-              chinese-default-input-method 'wubi
-              chinese-enable-youdao-dict t)
+     ;; (chinese :variables chinese-default-input-method 'wubi)
+     ;; (spacemacs/layouts :variables
+     ;;                    layouts-enable-autosave nil
+     ;;                    layouts-autosave-delay 300)
+     vincent
      )
 
    ;; List of additional packages that will be installed without being
