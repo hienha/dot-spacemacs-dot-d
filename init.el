@@ -67,6 +67,8 @@ This function should only modify configuration layer settings."
      ;; (spacemacs/layouts :variables
      ;;                    layouts-enable-autosave nil
      ;;                    layouts-autosave-delay 300)
+
+     ;; chinese
      vincent
      )
 

@@ -1,5 +1,6 @@
 ;; org agenda files
 (setq org-agenda-files '("~/org"))
+
 (defvar org-agenda-dir ""
   "gtd org files location")
 
