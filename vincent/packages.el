@@ -42,10 +42,25 @@
     (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)))
 
 (defun vincent/post-init-company()
-  (setq company-minimum-prefix-length 1))
+  (setq company-minimum-prefix-length 1)
+
+  (with-eval-after-load 'company
+    (define-key company-active-map (kbd "M-n") nil)
+    (define-key company-active-map (kbd "M-p") nil)
+    (define-key company-active-map (kbd "C-n") #'company-select-next-or-abort)
+    (define-key company-active-map (kbd "C-p") #'company-select-previous-or-abort)
+  ))
 
 (defun vincent/pre-init-occur-mode()
   (evilified-state-evilify-map occur-mode-map
     :mode occur-mode))
+
+(defun vincent/open-file-with-projectile-or-counsel-git ()
+  (interactive)
+  (if (vincent/vcs-project-root)
+      (counsel-git)
+    (if (projectile-project-p)
+        (projectile-find-file)
+      (ido-find-file))))
 
 ;;; packages.el ends here
