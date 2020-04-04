@@ -32,6 +32,7 @@
 (defconst vincent-packages
   '(youdao-dictionary
     company
+    find-file-in-project
     (occur-mode :location built-in))
   )
 
@@ -40,6 +41,12 @@
     :defer t
     :init
     (spacemacs/set-leader-keys "oy" 'youdao-dictionary-search-at-point+)))
+
+(defun vincent/init-find-file-in-project ()
+  (use-package find-file-in-project
+    :defer t
+    :init
+    (global-set-key (kbd "s-f") 'find-file-in-project)))
 
 (defun vincent/post-init-company()
   (setq company-minimum-prefix-length 1)
