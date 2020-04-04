@@ -11,6 +11,7 @@
  '(exec-path
    (quote
     ("/usr/local/bin" "/Library/Frameworks/Python.framework/Versions/3.7/bin" "/usr/bin" "/bin" "/usr/sbin" "/sbin" "/opt/X11/bin" "/usr/local/aria2/bin" "/usr/local/go/bin" "/Library/TeX/texbin" "/Applications/Wireshark.app/Contents/MacOS" "/Users/changfeng/.cask/bin" "/usr/local/texlive/2019/bin/x86_64-darwin")))
+ '(helm-locate-fuzzy-match nil)
  '(hl-todo-keyword-faces
    (quote
     (("TODO" . "#dc752f")
