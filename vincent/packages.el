@@ -32,9 +32,13 @@
 (defconst vincent-packages
   '(youdao-dictionary
     company
+    lispy
     find-file-in-project
     (occur-mode :location built-in))
   )
+
+(defun vincent/init-lispy()
+  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1))))
 
 (defun vincent/init-youdao-dictionary()
   (use-package youdao-dictionary

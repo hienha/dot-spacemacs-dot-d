@@ -53,7 +53,7 @@ This function should only modify configuration layer settings."
           magit-refs-show-commit-count 'all
           magit-revision-show-gravatars nil)
      helm
-     ibuffer 
+     ibuffer
      markdown
      multiple-cursors
      org
@@ -65,7 +65,7 @@ This function should only modify configuration layer settings."
      (syntax-checking :variables syntax-checking-enable-by-default nil)
      treemacs
      ;; (chinese :variables chinese-default-input-method 'wubi)
-     (spacemacs/layouts :variables layouts-enable-autosave nil layouts-autosave-delay 300)
+     ;; (spacemacs/layouts :variables layouts-enable-autosave nil layouts-autosave-delay 300)
 
      ;; chinese
      vincent
