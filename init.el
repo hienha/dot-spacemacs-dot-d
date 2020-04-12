@@ -232,7 +232,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font or prioritized list of fonts.
    dotspacemacs-default-font '("Courier New"
-                               :size 15.0
+                               :size 13.0
                                :weight normal
                                :width normal)
 

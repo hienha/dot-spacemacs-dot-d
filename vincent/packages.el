@@ -34,8 +34,8 @@
     company
     lispy
     find-file-in-project
-    (occur-mode :location built-in))
-  )
+    (occur-mode :location built-in)
+  ))
 
 (defun vincent/init-lispy()
   (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1))))
